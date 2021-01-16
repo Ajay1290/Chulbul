@@ -1,0 +1,25 @@
+<nav class="sw-navbar">
+    <a href="/" class="text-white b-3 sw-navbar-logo">Chulbul</a>
+    
+    <div class="sw-navbar-nav">
+        <a href="/{{ url_for( version + '/introduction') }}" class="sw-navbar-link">Documentation</a>
+        <a href="/{{ url_for( version + '/Templating/basics') }}" class="sw-navbar-link">Templating</a>
+        <a href="/{{ url_for( version + '/Configuration/basic-config') }}" class="sw-navbar-link">Configuration</a>
+        <a href="/{{ url_for( version + '/Plugins/use-plugins') }}" class="sw-navbar-link">Plugins</a>
+        <a href="/{{ url_for( version + '/api') }}" class="sw-navbar-link">API</a>
+    </div>
+
+    <div class="sw-navbar-nav ml-auto">
+        <div class="sw-btn-group sw-btn-sm f-12 b-3 sw-navbar-link">
+            <button class="sw-btn sw-btn-sm f-12 b-3 ">{{ version }}</button>
+            <div tabindex="2" class="sw-dropdown">
+                <button class="sw-btn sw-droplabel sw-btn-sm sw-btn-dropdown"></button>
+                <div class="sw-dropmenu right">
+                    <a href="/{{ version }}" class="sw-item">v0.0.1</a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-navbar-link">Github</a>
+        <a href="#" class="sw-navbar-link">Download</a>
+    </div>
+</nav>

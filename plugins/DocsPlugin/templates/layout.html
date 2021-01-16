@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %} {% endblock meta %}
+
+    {% if config.title %} <title>{{ config.title }}</title>
+    {% else %} <title>{% block title %}{{ config.name }} | {{ config.description }}{% endblock title %}</title> {% endif %}
+
+    <style> {{ docsCss }} {{ prismCss }} </style>
+    {% block styles %}
+    {% endblock styles %}
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header> {% block nav %} {% endblock nav %} </header>
+
+    <!-- Main Block -->
+    <main>
+        {% block main %}
+            <main class="doc-content">
+                {% block content %}
+                {% endblock content %}
+                <em>Last Updated: {{ last_updated }}</em>
+                {% if previous %}
+                    <a href="{{ previous }}">Previous Article</a>
+                {% endif %}
+                {% if next %}
+                    <a href="{{ next }}">Next Article</a>
+                {% endif %}
+            </main>
+
+            <aside class="doc-sidebar">
+                {% block sidebar %}
+                {% endblock sidebar %}
+            </aside>
+
+            <aside class="doc-toc">
+                {% block toc %}
+                {% endblock toc %}
+            </aside>
+        {% endblock main %}
+    </main>
+
+    <!-- Footer -->
+    <footer> {% block footer %} {% endblock footer %} </footer>
+    <script>
+        ['h1','h2','h3','h4','h5','h6'].forEach(elem => {
+            Array.from(document.getElementsByTagName(elem))
+            .forEach(el => {
+                let text = el.innerText.toLowerCase()
+                while(text.search(' ') == 1){ text = text.replace(' ', '-') }
+                el.id = text
+            })
+        })
+        Array.from(document.getElementsByTagName('pre')).forEach(elem => {
+            elem.querySelector('button.copy-btn').addEventListener('click', (e) => {
+                let range, selection, target = elem.querySelector('code');
+                if (document.body.createTextRange) {
+                    range = document.body.createTextRange();
+                    range.moveToElementText(target);
+                    range.select();
+                } else if (window.getSelection) {
+                    selection = window.getSelection();
+                    range = document.createRange();
+                    range.selectNodeContents(target);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+                document.execCommand('copy')
+            })
+        })
+    </script>
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>

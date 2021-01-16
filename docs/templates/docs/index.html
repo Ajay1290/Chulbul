@@ -1,0 +1,94 @@
+{% extends 'layouts/base.html' %}
+
+{% block main %}
+<div class="text-center p-5">
+    <h1 class="f-64 b-1 mb-1">Chulbul</h1>
+    <h2 class="f-24">The Minimalistic Static Site Generator</h2>
+</div>
+
+<!-- Getting Started -->
+<div id="Getting-Started" class="my-50px  sw-row">
+    <div class="sw-col-6 pr-5">
+        <h3>Getting Started</h3>
+        <p class="f-20 my-20px">New to Chulbul and want to start quickly with minimalistic setup ?</p>
+        <p class="f-20 my-20px">Install the latest version of chulbul using npm package manager or yarn distro using commands shown on right.</p>  
+    </div>
+    <div class="sw-col-6">
+        {{ code('shell', 'npm install chulbul --save') | safe }}
+    <div class="text-center">or</div>
+        {{ code('shell', 'yarn add chulbul') | safe }}
+    </div>
+</div>
+
+<!-- Do you Know ? -->
+<div id="Concept" class="my-50px sw-row">
+    <div class="sw-col-12">
+        <h3 class="mb-20px">Do you Know ?</h3>
+        <p class="f-20 my-1">
+            Chulbul follows minimalistic way to provide the solution to extend the features we use plugins.
+        </p>
+        <p class="f-20 my-1">
+            Chulbul uses HTML, CSS & JS and to reduce boilerplate code we use nunjucks as a templating engine
+        </p>
+    </div>
+</div>   
+
+<!-- Usage -->
+<div id="Usage" class="my-50px sw-row">
+    <div class="sw-col-12">
+        <h3>Hello World with Chulbul</h3>
+    </div>
+    <div class="sw-col-6">
+{{ code("javascript", 
+'const Chulbul = require("Chulbul");
+\
+Chulbul(__dirname, config)
+    .listen(5000);
+') | safe }}
+    </div>
+    <div class="sw-col-6 pl-5 mt-4">
+        <p class="f-20 my-1">
+            This will start the development server for you 
+            running on localhost where hello world page is waiting for you.
+        </p>
+        <p class="f-20 my-1">
+            Aprart from that it creates four directories for you 
+            template, build, static, and docs
+        </p>
+    </div>
+</div>
+
+<!-- Features -->
+<div id="Usage" class="my-50px sw-row">
+    <div class="sw-col-12 mb-2">
+        <h3>Features</h3>
+    </div>
+    <div class="sw-col-4">
+        <div class="sw-card p-3 mr-2">
+            <h3 class="f-22 text-center b-3 mb-0">Auto URL Routing</h3>
+            <p class="sw-card-body f-16 py-3">
+                Chulbul routes url automatically by looking at directory structure of docs directory.
+            </p>
+            <div class="sw-card-footer text-right mt-0 mb-2"> <a href="/" class="mr-4">Learn more</a> </div>
+        </div>
+    </div>
+    <div class="sw-col-4">
+        <div class="sw-card p-3 mr-2">
+            <h3 class="f-22 text-center b-3 mb-0">Versioning Enabled</h3>
+            <p class="sw-card-body f-16 py-3 px-2">
+                You can version your documentation with less headache and simple version routing.
+            </p>
+            <div class="sw-card-footer text-right mt-0 mb-2"> <a href="/" class="mr-4">Learn more</a> </div>
+        </div>
+    </div>
+    <div class="sw-col-4">
+        <div class="sw-card p-3">
+            <h3 class="f-22 text-center b-3 mb-0">Lots of Plugins</h3>
+            <p class="sw-card-body f-16 py-3">
+                Plugins to extends features easily you can even create your own plugin it's easy.
+            </p>
+            <div class="sw-card-footer text-right mt-0 mb-2"> <a href="/" class="mr-4">Learn more</a> </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

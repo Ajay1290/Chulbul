@@ -1,0 +1,29 @@
+{% extends DocsPlugin %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='swarup.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+{% endblock styles %}
+
+{% block nav %} {% include 'components/navbar.html' %} {% endblock nav %}
+
+{% block sidebar %} {% include 'components/sidebar.html' %} {% endblock sidebar %}
+
+{% block content %} {% endblock content %}
+
+
+
+{% block toc %}
+<div class="sw-list">
+
+</div>
+{% endblock toc %}
+
+{% block footer %} {% include 'components/footer.html' %} {% endblock footer %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='swarup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='power.js') }}"></script>
+{% endblock scripts %}

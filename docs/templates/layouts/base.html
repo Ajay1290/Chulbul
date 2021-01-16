@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='swarup.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <style>{{ docsCss }} {{ prismCss }}</style>
+    {% block styles %}
+    {% endblock styles %}
+
+</head>
+
+<body>
+    <header>
+        {% block nav %} {% include 'components/navbar.html' %} {% endblock nav %}
+    </header>
+
+    <main class="mx-auto" style="width: 1000px;">
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+    <footer>
+        {% block footer %} {% include 'components/footer.html' %} {% endblock footer %}
+    </footer>
+
+    {% block scripts %}
+    {% endblock scripts %}
+    <script src="{{ url_for('static', filename='power.js') }}"></script>
+    <script src="{{ url_for('static', filename='swarup.min.js') }}"></script>
+</body>
+
+</html>

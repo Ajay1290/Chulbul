@@ -1,0 +1,87 @@
+:root{
+    --theme-primary: rgb(99, 45, 3);
+    --theme-secondary: #FFF;
+    --theme-surface: #FFF;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pad{
+    position: relative;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    padding: 5em;
+}
+
+.sw-navbar-nav{
+    align-items: center;
+}
+
+.a.sw-btn:hover, a.sw-btn:hover,
+.a.sw-btn:active, a.sw-btn:active{
+    color: #fff;
+    text-decoration: none;
+}
+
+main{
+    position: sticky;
+    display: block;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+}
+
+.lead{
+    font-size: 44px;
+    line-height: 1.1em;
+}
+
+.sub-lead{
+    font-size: 28px;
+    line-height: 1.1em;
+}
+
+footer{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--theme-primary);
+    padding: 20px 35px 20px 35px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5em 0;
+}
+
+code{
+    background-color: #d9d9d9;
+    font-size: 0.8em;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+p {
+    color: #434343;
+    line-height: 24px;
+    margin: 0 0 0.8em 0;
+    font-size: 15px;
+    font-weight: 100;
+    font-family: "Roboto";
+}
+
+.sw-navbar-logo:hover{
+    color: white;
+    text-decoration: none;
+}

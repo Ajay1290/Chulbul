@@ -1,0 +1,67 @@
+{
+    "build": {
+        "index.html": null,
+        "main.css": null,
+        "power.js": null,
+        "swarup.min.css": null,
+        "swarup.min.js": null,
+        "v0.0.1": {
+            "Configuration": {
+                "basic-config.html": null,
+                "index.html": null
+            },
+            "Plugins": {
+                "create-plugins.html": null,
+                "index.html": null,
+                "use-plugins.html": null
+            },
+            "Templating": {
+                "basics.html": null,
+                "index.html": null,
+                "variables.html": null
+            },
+            "index.html": null,
+            "introduction.html": null,
+            "setup.html": null
+        }
+    },
+    "index.js": null,
+    "templates": {
+        "components": {
+            "footer.html": null,
+            "navbar.html": null
+        },
+        "docs": {
+            "index.html": null,
+            "v0.0.1": {
+                "Configuration": {
+                    "basic-config.md": null,
+                    "index.md": null
+                },
+                "Plugins": {
+                    "create-plugins.md": null,
+                    "index.md": null,
+                    "use-plugins.md": null
+                },
+                "Templating": {
+                    "basics.md": null,
+                    "index.md": null,
+                    "variables.md": null
+                },
+                "index.md": null,
+                "introduction.md": null,
+                "setup.md": null
+            }
+        },
+        "layouts": {
+            "base.html": null,
+            "docs.html": null
+        },
+        "static": {
+            "main.css": null,
+            "power.js": null,
+            "swarup.min.css": null,
+            "swarup.min.js": null
+        }
+    }
+}

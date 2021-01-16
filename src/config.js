@@ -1,58 +1,53 @@
 const p = require("path");
-const { URL } = require("url");
 
-const PRODUCTION = "production";
-const PROTOCOL = /^http[s]?:\/\//i;
-
-const defaultConfig = {
-    env: process.env.NODE_ENV ? process.env.NODE_ENV : PRODUCTION,
-    watch: false,
-    url: "http://localhost:4000/",
-    cwd: process.cwd(),
+let defaultConfig = {
+    name: "Static Site",
+    description: "The Static Site for you.",
+    title: "Title for your static site.",
+    url: "githubUserName.github.com",
+    baseUrl: '/projectName',
+    env: 'development',
+    dir: '.',
+    minify: true,
     verbose: true,
-    docsDir: "/templates/docs",
-    buildDir: "/build",
-    tempDir: "/templates",
+    bundleUp: true,
+    versoning: true,
+    tempDir: './templates',
+    docsDir: './templates/docs',
+    staticDir: './templates/static',
+    buildDir: './build',
+    scripts: [],
+    styles: [],
+    versions: {
+        'v0.0.1': p.resolve(__dirname, './templates/docs/v0.0.1')
+    },
+    errors: {
+        on404: p.resolve(__dirname, './templates/404.html'),
+    }
 }
 
 class Config {
 
-  constructor(options = defaultConfig) {
-    this.options = options;
+    constructor(dir, options = defaultConfig) {
+        options = Object.assign(defaultConfig, options)
+        options.dir = dir
+        this.options = options;
+        this.parseOptions(this.options);
 
-    this.parseOptions(this.options);
-
-    return new Proxy(this, {
-      get(config, prop) {
-        return prop in config ? config[prop] : config.options[prop];
-      }
-    });
-  }
-
-  parseOptions(options) {
-    this.cwd        = process.cwd();
-    this.docsDir    = p.resolve(this.cwd, options.docsDir);
-    this.staticDir   = p.resolve(this.cwd, options.staticDir);
-    this.buildDir   = p.resolve(this.cwd, options.buildDir);
-    
-    const url = PROTOCOL.test(options.url) ? options.url : `http://${options.url}`;
-
-    this.url = new URL(url);
-
-    if (!this.isProduction()) {
-      this.url.protocol = "http:";
-      this.url.hostname = "localhost";
-      this.url.pathname = "/";
-
-      if (!this.url.port) {
-        this.url.port = 4000;
-      }
+        return this.options
     }
-  }
 
-  isProduction() {
-    return this.options.env.toLowerCase() === "production";
-  }
+    parseOptions(options) {
+        this.cwd = options.dir;
+        options.tempDir = p.resolve(this.cwd, options.tempDir);
+        options.docsDir = p.resolve(this.cwd, options.docsDir);
+        options.staticDir = p.resolve(this.cwd, options.staticDir);
+        options.buildDir = p.resolve(this.cwd, options.buildDir);
+    }
+
+    isProduction() {
+        return this.options.env.toLowerCase() === "production";
+    }
 }
 
 module.exports = Config;
