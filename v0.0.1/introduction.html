@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chulbul | The Static Site Genrator</title><style>.doc-sidebar {
+    position: sticky;
+    display: inline-block;
+    top: 0;
+    float: left;
+    width: 220px;
+    border-right: 1px solid #434343;
+    height: 100vh;
+    overflow: auto;
+}
+
+.doc-content {
+    position: relative;
+    width: calc(100% - 450px);
+    display: inline-block;
+    min-height: auto;
+    height: 100%;
+    top: 0;
+    padding: 20px 40px;
+}
+
+.doc-toc {
+    display: inline-block;
+    position: sticky;
+    float: right;
+    top: 20px;
+    right: 10px;
+    width: 200px;
+    font-size: 12px;
+    line-height: 0.8em;
+    margin-top: 20px;
+    padding: 5px 0;
+    border-left: 1px solid var(--theme-primary);
+}
+
+.doc-toc .sw-list&gt;.sw-list {
+    margin: 5px 10px;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+p {
+    color: #434343;
+    line-height: 1.5rem;
+    margin: 0 0 0.5em 0;
+}
+
+pre {
+    position: relative;
+    overflow: auto;
+    background: #221111;
+    padding: 15px;
+    border-radius: 4px;
+    line-height: 1.5em;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(8, 8, 8, 0.3);
+    background-color: #fff;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+pre code {
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 1em;
+} /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*=&quot;language-&quot;],
+pre[class*=&quot;language-&quot;] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, &#39;Andale Mono&#39;, &#39;Ubuntu Mono&#39;, monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*=&quot;language-&quot;] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) &gt; code[class*=&quot;language-&quot;],
+pre[class*=&quot;language-&quot;] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) &gt; code[class*=&quot;language-&quot;] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}</style><link rel="stylesheet" href="/swarup.min.css"><link rel="stylesheet" href="/main.css"></head><body><header><nav class="sw-navbar"><a href="/Chulbul//" class="text-white b-3 sw-navbar-logo">Chulbul</a><div class="sw-navbar-nav"><a href="/Chulbul/v0.0.1/introduction" class="sw-navbar-link">Documentation</a> <a href="/Chulbul/v0.0.1/Templating/basics" class="sw-navbar-link">Templating</a> <a href="/Chulbul/v0.0.1/Configuration/basic-config" class="sw-navbar-link">Configuration</a> <a href="/Chulbul/v0.0.1/Plugins/use-plugins" class="sw-navbar-link">Plugins</a> <a href="/Chulbul/v0.0.1/api" class="sw-navbar-link">API</a></div><div class="sw-navbar-nav ml-auto"><div class="sw-btn-group sw-btn-sm f-12 b-3 sw-navbar-link"><button class="sw-btn sw-btn-sm f-12 b-3">v0.0.1</button><div tabindex="2" class="sw-dropdown"><button class="sw-btn sw-droplabel sw-btn-sm sw-btn-dropdown"></button><div class="sw-dropmenu right"><a href="/v0.0.1" class="sw-item">v0.0.1</a></div></div></div><a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-navbar-link">Github</a> <a href="#" class="sw-navbar-link">Download</a></div></nav></header><main><main class="doc-content"><p></p><h1>Introduction</h1><p>Chulbul is the Minimalistic Static Site Generator which is simple, fast and easy to use which is intended to be used for creating documentations.</p><h2>Why Chulbul ?</h2><p>It uses <code>HTML</code>, <code>CSS</code>, <code>JS</code> and <code>Markdown</code> to write code for the docs which means it is highly customizable.</p><h2>What about boilerplate code ?</h2><p>To deal with boilerplate code chulbul uses <a href="https://mozilla.github.io/nunjucks/">nunjucks</a> as a templating engine so that you can inherit your layout to each html or md file to reduce boilerplate code. Also you can get benifit of A rich and powerful templating features of it.</p><h2>Features</h2><ul><li>Uses <code>HTML</code>, <code>CSS</code>, <code>JS</code> and <code>Markdown</code> to build static sites</li><li>Minifies all static files which are suitable for production use.</li><li>Auto Url Routing (it does automatically by your folder structure)</li><li>Boilerplate code (nunjucks helps in it)</li><li>Easy to extend features via plugins</li></ul><p><em>Last Updated: 16/01/2021</em> <a href="/download">Next Article</a></p></main><aside class="doc-sidebar"><div class="sw-list m-3"><div class="sw-list-label">Getting Started</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/introduction" class="sw-item active">Introduction</a> <a href="/Chulbul/v0.0.1/setup" class="sw-item">Setting Up..</a> <a href="/Chulbul/v0.0.1/use-cases" class="sw-item">Use Cases</a></div><div class="sw-list-label">Configurations</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/Configuration/basic-config" class="sw-item">Basic Config</a> <a href="/Chulbul/v0.0.1/Configuration/advance-config" class="sw-item">Advance Config</a> <a href="/Chulbul/v0.0.1/Configuration/plugin-config" class="sw-item">Plugin Config</a></div><div class="sw-list-label">Templating</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/Templating/basics" class="sw-item">Basics</a> <a href="/Chulbul/v0.0.1/Templating/variables" class="sw-item">Variables</a> <a href="/Chulbul/v0.0.1/Templating/conditions-and-loops" class="sw-item">Conditions & Loops</a> <a href="/Chulbul/v0.0.1/Templating/filters" class="sw-item">Filters</a> <a href="/Chulbul/v0.0.1/Templating/inheritance" class="sw-item">Inheritance</a> <a href="/Chulbul/v0.0.1/Templating/for-plugin" class="sw-item">For Plugins</a></div><div class="sw-list-label">Deployment</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/Deployment/basics" class="sw-item">Basic Deployment</a></div><div class="sw-list-label">Plugins</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/Plugins/use-plugins" class="sw-item">Use Plugins</a> <a href="/Chulbul/v0.0.1/Plugins/create-plugins" class="sw-item">Create Plugins</a> <a href="/Chulbul/v0.0.1/Plugins/plugin-marketplace" class="sw-item">Plugin Marketplace</a></div><div class="sw-list-label">API</div><div class="sw-list m-1"><a href="/Chulbul/v0.0.1/API/basic-config" class="sw-item">Server API</a> <a href="/Chulbul/v0.0.1/API/basic-config" class="sw-item">Renderer API</a> <a href="/Chulbul/v0.0.1/API/basic-config" class="sw-item">Processor API</a></div></div></aside><aside class="doc-toc"><div class="sw-list"></div></aside></main><footer><footer><div class="sw-row"><div class="sw-col-5"><h1 class="f-30 b-3">Chulbul</h1><h2 class="f-18 b-3" style="line-height: 1.3em;">The Minimalistic Static Site Generator<br>which is simple, fast and easy to use.</h2><span class="f-12">This documentation is built with Chulbul</span></div><div class="sw-col-2"><h1 class="f-22">Documentation</h1><ul class="sw-list"><a href="//Chulbul/v0.0.1/introduction" class="sw-item">Getting Started</a> <a href="//Chulbul/v0.0.1/Templating/basics" class="sw-item">Templating</a> <a href="//Chulbul/v0.0.1/Configuration/basic-config" class="sw-item">Configuration</a></ul></div><div class="sw-col-2"><h1 class="f-22">Learn More!</h1><ul class="sw-list"><a href="//Chulbul/v0.0.1/Deployment/basics" class="sw-item">Deployment</a> <a href="//Chulbul/v0.0.1/Plugins/use-plugins" class="sw-item">Plugins</a> <a href="//Chulbul/v0.0.1/introduction" class="sw-item">API</a></ul></div><div class="sw-col-2"><h1 class="f-22">Resources</h1><ul class="sw-list"><a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-item">Github</a> <a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-item">Download</a></ul></div></div><div class="mt-4 f-12">Copyright &#169 Ajay Patil 2020-present. Code released under the MIT license.</div></footer></footer><script>['h1','h2','h3','h4','h5','h6'].forEach(elem => {
+            Array.from(document.getElementsByTagName(elem))
+            .forEach(el => {
+                let text = el.innerText.toLowerCase()
+                while(text.search(' ') == 1){ text = text.replace(' ', '-') }
+                el.id = text
+            })
+        })
+        Array.from(document.getElementsByTagName('pre')).forEach(elem => {
+            elem.querySelector('button.copy-btn').addEventListener('click', (e) => {
+                let range, selection, target = elem.querySelector('code');
+                if (document.body.createTextRange) {
+                    range = document.body.createTextRange();
+                    range.moveToElementText(target);
+                    range.select();
+                } else if (window.getSelection) {
+                    selection = window.getSelection();
+                    range = document.createRange();
+                    range.selectNodeContents(target);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }
+                document.execCommand('copy')
+            })
+        })</script><script src="/swarup.min.js"></script><script src="/power.js"></script></body></html>

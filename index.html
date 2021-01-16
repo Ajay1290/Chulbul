@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chulbul | The Static Site Genrator</title><link rel="stylesheet" href="/swarup.min.css"><link rel="stylesheet" href="/main.css"><style>.doc-sidebar {
+    position: sticky;
+    display: inline-block;
+    top: 0;
+    float: left;
+    width: 220px;
+    border-right: 1px solid #434343;
+    height: 100vh;
+    overflow: auto;
+}
+
+.doc-content {
+    position: relative;
+    width: calc(100% - 450px);
+    display: inline-block;
+    min-height: auto;
+    height: 100%;
+    top: 0;
+    padding: 20px 40px;
+}
+
+.doc-toc {
+    display: inline-block;
+    position: sticky;
+    float: right;
+    top: 20px;
+    right: 10px;
+    width: 200px;
+    font-size: 12px;
+    line-height: 0.8em;
+    margin-top: 20px;
+    padding: 5px 0;
+    border-left: 1px solid var(--theme-primary);
+}
+
+.doc-toc .sw-list&gt;.sw-list {
+    margin: 5px 10px;
+}
+
+h1 {
+    font-size: 3.2em;
+}
+
+p {
+    color: #434343;
+    line-height: 1.5rem;
+    margin: 0 0 0.5em 0;
+}
+
+pre {
+    position: relative;
+    overflow: auto;
+    background: #221111;
+    padding: 15px;
+    border-radius: 4px;
+    line-height: 1.5em;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(8, 8, 8, 0.3);
+    background-color: #fff;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+pre code {
+    border-radius: 4px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 1em;
+} /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*=&quot;language-&quot;],
+pre[class*=&quot;language-&quot;] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, &#39;Andale Mono&#39;, &#39;Ubuntu Mono&#39;, monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*=&quot;language-&quot;] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) &gt; code[class*=&quot;language-&quot;],
+pre[class*=&quot;language-&quot;] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) &gt; code[class*=&quot;language-&quot;] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}</style></head><body><header><nav class="sw-navbar"><a href="/Chulbul//" class="text-white b-3 sw-navbar-logo">Chulbul</a><div class="sw-navbar-nav"><a href="/Chulbul/v0.0.1/introduction" class="sw-navbar-link">Documentation</a> <a href="/Chulbul/v0.0.1/Templating/basics" class="sw-navbar-link">Templating</a> <a href="/Chulbul/v0.0.1/Configuration/basic-config" class="sw-navbar-link">Configuration</a> <a href="/Chulbul/v0.0.1/Plugins/use-plugins" class="sw-navbar-link">Plugins</a> <a href="/Chulbul/v0.0.1/api" class="sw-navbar-link">API</a></div><div class="sw-navbar-nav ml-auto"><div class="sw-btn-group sw-btn-sm f-12 b-3 sw-navbar-link"><button class="sw-btn sw-btn-sm f-12 b-3">v0.0.1</button><div tabindex="2" class="sw-dropdown"><button class="sw-btn sw-droplabel sw-btn-sm sw-btn-dropdown"></button><div class="sw-dropmenu right"><a href="/v0.0.1" class="sw-item">v0.0.1</a></div></div></div><a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-navbar-link">Github</a> <a href="#" class="sw-navbar-link">Download</a></div></nav></header><main class="mx-auto" style="width: 1000px;"><p></p><div class="text-center p-5"><h1 class="f-64 b-1 mb-1">Chulbul</h1><h2 class="f-24">The Minimalistic Static Site Generator</h2></div><div id="Getting-Started" class="my-50px sw-row"><div class="sw-col-6 pr-5"><h3>Getting Started</h3><p class="f-20 my-20px">New to Chulbul and want to start quickly with minimalistic setup ?</p><p class="f-20 my-20px">Install the latest version of chulbul using npm package manager or yarn distro using commands shown on right.</p></div><div class="sw-col-6"><pre><button class="copy-btn">copy</button><code class="language">npm install chulbul --save</code></pre><div class="text-center">or</div><pre><button class="copy-btn">copy</button><code class="language">yarn add chulbul</code></pre></div></div><div id="Concept" class="my-50px sw-row"><div class="sw-col-12"><h3 class="mb-20px">Do you Know ?</h3><p class="f-20 my-1">Chulbul follows minimalistic way to provide the solution to extend the features we use plugins.</p><p class="f-20 my-1">Chulbul uses HTML, CSS & JS and to reduce boilerplate code we use nunjucks as a templating engine</p></div></div><div id="Usage" class="my-50px sw-row"><div class="sw-col-12"><h3>Hello World with Chulbul</h3></div><div class="sw-col-6"><pre><button class="copy-btn">copy</button><code class="language-javascript"><span class="token keyword">const</span> Chulbul <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"Chulbul"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">Chulbul</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> config<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="sw-col-6 pl-5 mt-4"><p class="f-20 my-1">This will start the development server for you running on localhost where hello world page is waiting for you.</p><p class="f-20 my-1">Aprart from that it creates four directories for you template, build, static, and docs</p></div></div><div id="Usage" class="my-50px sw-row"><div class="sw-col-12 mb-2"><h3>Features</h3></div><div class="sw-col-4"><div class="sw-card p-3 mr-2"><h3 class="f-22 text-center b-3 mb-0">Auto URL Routing</h3><p class="sw-card-body f-16 py-3">Chulbul routes url automatically by looking at directory structure of docs directory.</p><div class="sw-card-footer text-right mt-0 mb-2"><a href="/" class="mr-4">Learn more</a></div></div></div><div class="sw-col-4"><div class="sw-card p-3 mr-2"><h3 class="f-22 text-center b-3 mb-0">Versioning Enabled</h3><p class="sw-card-body f-16 py-3 px-2">You can version your documentation with less headache and simple version routing.</p><div class="sw-card-footer text-right mt-0 mb-2"><a href="/" class="mr-4">Learn more</a></div></div></div><div class="sw-col-4"><div class="sw-card p-3"><h3 class="f-22 text-center b-3 mb-0">Lots of Plugins</h3><p class="sw-card-body f-16 py-3">Plugins to extends features easily you can even create your own plugin it's easy.</p><div class="sw-card-footer text-right mt-0 mb-2"><a href="/" class="mr-4">Learn more</a></div></div></div></div></main><footer><footer><div class="sw-row"><div class="sw-col-5"><h1 class="f-30 b-3">Chulbul</h1><h2 class="f-18 b-3" style="line-height: 1.3em;">The Minimalistic Static Site Generator<br>which is simple, fast and easy to use.</h2><span class="f-12">This documentation is built with Chulbul</span></div><div class="sw-col-2"><h1 class="f-22">Documentation</h1><ul class="sw-list"><a href="//Chulbul/v0.0.1/introduction" class="sw-item">Getting Started</a> <a href="//Chulbul/v0.0.1/Templating/basics" class="sw-item">Templating</a> <a href="//Chulbul/v0.0.1/Configuration/basic-config" class="sw-item">Configuration</a></ul></div><div class="sw-col-2"><h1 class="f-22">Learn More!</h1><ul class="sw-list"><a href="//Chulbul/v0.0.1/Deployment/basics" class="sw-item">Deployment</a> <a href="//Chulbul/v0.0.1/Plugins/use-plugins" class="sw-item">Plugins</a> <a href="//Chulbul/v0.0.1/introduction" class="sw-item">API</a></ul></div><div class="sw-col-2"><h1 class="f-22">Resources</h1><ul class="sw-list"><a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-item">Github</a> <a href="https://github.com/Ajay1290/Chulbul" target="_blank" class="sw-item">Download</a></ul></div></div><div class="mt-4 f-12">Copyright &#169 Ajay Patil 2020-present. Code released under the MIT license.</div></footer></footer><script src="/power.js"></script><script src="/swarup.min.js"></script></body></html>
