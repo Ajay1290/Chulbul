@@ -1,0 +1,14 @@
+{
+  "name": "Static Site",
+  "description": "The Static Site for you.",
+  "title": "Title for your static site.",
+  "url": "githubUserName.github.com",
+  "baseUrl": "/projectName",
+  "minify": true,
+  "verbose": true,
+  "staticDir": "./static",
+  "buildDir": "./build",
+  "onErrors": {
+    "404": "./pages/404.html"
+  }
+}
