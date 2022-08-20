@@ -1,3 +1,25 @@
 Add linting in this project
 Add comments in this project
 Add CI/CD in this project
+
+Solve This Below Bug.
+node:fs:1405
+  handleErrorFromBinding(ctx);
+  ^
+
+Error: ENOENT: no such file or directory, scandir 'C:\Users\ajayp\Documents\Chulbul\demo\src\static'
+    at Object.readdirSync (node:fs:1405:3)
+    at Processor.getFiles (C:\Users\ajayp\Documents\Chulbul\src\processor.js:80:24)
+    at Processor.genrateStaticDir (C:\Users\ajayp\Documents\Chulbul\src\processor.js:59:10)
+    at Processor.genrateBuildDir (C:\Users\ajayp\Documents\Chulbul\src\processor.js:25:10)
+    at Processor.process (C:\Users\ajayp\Documents\Chulbul\src\processor.js:19:10)
+    at ChulbulServer.listen (C:\Users\ajayp\Documents\Chulbul\src\server.js:69:24)
+    at startServer (C:\Users\ajayp\Documents\Chulbul\src\cli\commands.js:56:10)
+    at Command.<anonymous> (C:\Users\ajayp\Documents\Chulbul\src\cli\index.js:25:23)
+    at Command.listener [as _actionHandler] (C:\Users\ajayp\Documents\Chulbul\node_modules\commander\lib\command.js:488:17)
+    at C:\Users\ajayp\Documents\Chulbul\node_modules\commander\lib\command.js:1227:65 {
+  errno: -4058,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: 'C:\\Users\\ajayp\\Documents\\Chulbul\\demo\\src\\static'
+}
